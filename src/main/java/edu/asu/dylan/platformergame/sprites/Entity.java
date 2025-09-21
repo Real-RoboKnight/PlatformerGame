@@ -14,16 +14,16 @@ public class Entity extends ImageView {
     public Point2D position;
     public Point2D velocity = Point2D.ZERO;
     public Point2D acceleration = new Point2D(0, Settings.gravity);
-    private MovementLockRecord movementLock = new MovementLockRecord(true, true);
 
     public Entity() {
         scheduler.scheduleAtFixedRate(this::physicsEngine, 0, Settings.physicsFrequencyMS, TimeUnit.MILLISECONDS);
-        antiWindup();
+        position = new Point2D(getTranslateX(), getTranslateY());
     }
 
     protected void physicsEngine() {
-        calculateDrag();
         integratePositionVelocityAcceleration();
+//        System.out.println("this = " + this);
+        calculateDrag();
         moveEntity();
     }
 
@@ -37,76 +37,20 @@ public class Entity extends ImageView {
     }
 
     /**
-     * Moves the entity to the location shown in the location point, if movementLock doesn't prevent its move
-     * @see MovementLockRecord
+     * Moves the entity to the location shown in the location point
      */
     protected void moveEntity() {
-        if (!movementLock.getX()) this.setTranslateX(position.getX());
-        if (!movementLock.getY()) this.setTranslateY(position.getY());
-    }
-
-    /**
-     * @param x weather the entity's x position should be locked or not
-     */
-    public void lockXMovement(boolean x) {
-        antiWindupX();
-        movementLock = new MovementLockRecord(x, movementLock.getY());
-    }
-
-    /**
-     * @param y weather the entity's y position should be locked or not
-     */
-    public void lockYMovement(boolean y) {
-        antiWindupY();
-        movementLock = new MovementLockRecord(movementLock.getX(), y);
-    }
-    /**
-     * @param x weather the entity's x position should be locked or not
-     * @param y weather the entity's y position should be locked or not
-     */
-    public void lockMovement(boolean x, boolean y) {
-        antiWindup();
-        movementLock = new MovementLockRecord(x, y);
-    }
-
-    private void antiWindupX() {
-        velocity = new Point2D(0, velocity.getY());
-        position = new Point2D(this.getTranslateX(), position.getY());
-    }
-
-    private void antiWindupY() {
-        velocity = new Point2D(velocity.getX(), 0);
-        position = new Point2D(position.getX(), this.getTranslateY());
-    }
-
-    private void antiWindup() {
-        velocity = Point2D.ZERO;
-        position = new Point2D(this.getTranslateX(), this.getTranslateY());
-    }
-
-    /**
-     * Locks the Entities x or y position in place
-     * @param x
-     * @param y
-     */
-    private record MovementLockRecord(boolean x, boolean y) {
-        public boolean getX() {
-            return x();
-        }
-
-        public boolean getY() {
-            return y();
-        }
+        this.setTranslateX(position.getX());
+        this.setTranslateY(position.getY());
     }
 
     @Override
     public String toString() {
-        return "Entity{" +
+        return getClass().getName() + "{" +
                 "ImageView=" + super.toString() +
                 ", position=" + position +
                 ", velocity=" + velocity +
                 ", acceleration=" + acceleration +
-                ", movementLock=" + movementLock +
                 '}';
     }
 }

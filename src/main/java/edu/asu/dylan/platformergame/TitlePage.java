@@ -16,7 +16,6 @@ public class TitlePage {
     @FXML
     protected void onStartButtonClick() {
         titleText.setText("Welcome to JavaFX Application!");
-        player.lockMovement(false, false);
         player.getScene().setOnKeyPressed(player::handleKeyInput);
     }
 }

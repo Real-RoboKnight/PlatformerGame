@@ -6,5 +6,5 @@ public class Settings {
         public static final double inputPower = 10;
     }
     public static final long physicsFrequencyMS = 16;
-    public static final int gravity = 1;
+    public static final int gravity = 0;
 }
