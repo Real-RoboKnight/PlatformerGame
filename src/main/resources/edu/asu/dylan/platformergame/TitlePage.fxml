@@ -6,39 +6,43 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import edu.asu.dylan.platformergame.sprites.*?>
+<?import edu.asu.dylan.platformergame.sprites.entitys.*?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.asu.dylan.platformergame.TitlePage">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <StackPane>
-      <children>
-          <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
-              <Image url="@Assets/TitlePageBackground.png"/>
-          </ImageView>
+    <StackPane>
+        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@Assets/TitlePageBackground.png"/>
+        </ImageView>
 
-          <Label fx:id="titleText" alignment="CENTER" onMouseClicked="#textInteraction" text="Welcome To Sirens Shore" textFill="WHITE" StackPane.alignment="TOP_CENTER">
-            <font>
-               <Font size="64.0" />
-            </font>
-            <StackPane.margin>
-               <Insets top="50.0" />
-            </StackPane.margin></Label>
+        <Label fx:id="titleText" alignment="CENTER" text="Welcome To Sirens Shore" textFill="WHITE"
+               StackPane.alignment="TOP_CENTER">
+          <font>
+              <Font size="64.0"/>
+          </font>
+          <StackPane.margin>
+              <Insets top="50.0"/>
+          </StackPane.margin>
+        </Label>
 
-          <Button fx:id="startButton" defaultButton="true" onAction="#onHelloButtonClick" style="-fx-background-color: rgb(200, 200, 255);" text="Start" textAlignment="CENTER" textFill="#0059ff" StackPane.alignment="BOTTOM_CENTER">
+        <Button fx:id="startButton" defaultButton="true" onAction="#onStartButtonClick"
+                style="-fx-background-color: rgb(200, 200, 255);" text="Start" textAlignment="CENTER" textFill="#0059ff"
+                StackPane.alignment="BOTTOM_CENTER">
+          <StackPane.margin>
+              <Insets top="50.0"/>
+          </StackPane.margin>
+          <font>
+              <Font size="96.0"/>
+          </font>
+        </Button>
+
+        <Player fx:id="player" fitHeight="100.0" fitWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <Image url="@Assets/UnknownTexture.png"/>
             <StackPane.margin>
-               <Insets top="50.0" />
+              <Insets top="50.0"/>
             </StackPane.margin>
-            <font>
-               <Font size="96.0" />
-            </font></Button>
-
-          <Player fitHeight="100.0" fitWidth="100.0" StackPane.alignment="TOP_CENTER">
-              <Image url="@Assets/UnknownTexture.png"/>
-              <StackPane.margin>
-                <Insets top="50.0" />
-          </StackPane.margin></Player>
-      </children>
-   </StackPane>
+        </Player>
+    </StackPane>
 </VBox>
