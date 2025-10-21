@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import edu.asu.dylan.platformergame.sprites.entitys.Player?>
+<?import edu.asu.dylan.platformergame.sprites.sprites.Wall?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -20,7 +21,7 @@
             <Image url="@Assets/TitlePageBackground.png" />
         </ImageView>
 
-        <Label fx:id="titleText" alignment="CENTER" text="Welcome To Sirens Shore" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+        <Label fx:id="titleText" alignment="CENTER" onMouseClicked="#titleTextClicked" text="Welcome To Sirens Shore" textFill="WHITE" StackPane.alignment="TOP_CENTER">
           <font>
               <Font size="64.0" />
           </font>
@@ -29,7 +30,7 @@
           </StackPane.margin>
         </Label>
 
-        <Button fx:id="startButton" defaultButton="true" onAction="#onStartButtonClick" style="-fx-background-color: rgb(200, 200, 255);" text="Start" textAlignment="CENTER" textFill="#0059ff" StackPane.alignment="BOTTOM_CENTER">
+        <Button defaultButton="true" onAction="#onStartButtonClick" style="-fx-background-color: #d65d0e;" text="Start" textAlignment="CENTER" textFill="#0059ff" StackPane.alignment="BOTTOM_CENTER">
           <StackPane.margin>
               <Insets top="50.0" />
           </StackPane.margin>
@@ -44,5 +45,18 @@
             <Insets top="50.0" />
          </StackPane.margin>
         </Player>
+
+        <Wall fitHeight="16.0" fitWidth="1920.0" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets bottom="5.0" />
+            </StackPane.margin>
+        </Wall>
+        <Wall fitHeight="1080.0" fitWidth="16.0" StackPane.alignment="CENTER_RIGHT">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets right="5.0" />
+            </StackPane.margin>
+        </Wall>
     </StackPane>
 </VBox>

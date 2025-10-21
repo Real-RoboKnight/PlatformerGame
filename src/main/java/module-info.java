@@ -14,4 +14,5 @@ module edu.asu.dylan.platformergame {
     exports edu.asu.dylan.platformergame.sprites;
     exports edu.asu.dylan.platformergame;
     exports edu.asu.dylan.platformergame.sprites.entitys;
+    exports edu.asu.dylan.platformergame.sprites.sprites;
 }
