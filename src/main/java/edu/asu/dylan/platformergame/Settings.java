@@ -6,7 +6,7 @@ public class Settings {
         public static final double inputPower = 5;
     }
     public static final long physicsFrequencyMS = 16;
-    public static final double gravity = 0.05;
+    public static final double gravity = 0.075;
 
     public static final int snapingTolarancePX = 16;
 }

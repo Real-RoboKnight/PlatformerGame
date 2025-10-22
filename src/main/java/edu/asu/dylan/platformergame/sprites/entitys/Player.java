@@ -25,7 +25,30 @@ public class Player extends Entity {
     }
 
     @Override
-    public Point2D interact(Entity entity) {
-        return null;
+    protected void onSnap(Direction direction) {
+        switch (direction) {
+            case None -> {}
+            case Up -> this.velocity = new Point2D(
+                    this.velocity.getX(),
+                    Math.max(0, this.velocity.getY())
+            );
+            case Down -> this.velocity = new Point2D(
+                    this.velocity.getX(),
+                    Math.min(0, this.velocity.getY())
+            );
+            case Left -> this.velocity = new Point2D(
+                    Math.min(0, this.velocity.getX()),
+                    this.velocity.getY()
+            );
+            case Right -> this.velocity = new Point2D(
+                    Math.max(0, this.velocity.getX()),
+                    this.velocity.getY()
+            );
+        }
+    }
+
+    @Override
+    public Direction interact(Entity entity) {
+        return Direction.None;
     }
 }

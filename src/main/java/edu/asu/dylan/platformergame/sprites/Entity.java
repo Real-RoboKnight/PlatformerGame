@@ -39,12 +39,10 @@ public abstract class Entity extends Sprite {
         Sprite.sprites.stream()
                 .filter(sprite -> sprite != this) //Dont check for collisions with self
                 .filter(sprite -> sprite.localToScene(sprite.getBoundsInLocal()).intersects(this.localToScene(this.getBoundsInLocal()))) //Only interact with entities that we are contacting
-                .forEachOrdered(sprite -> {
-                    this.position = sprite.interact(this);
-//                    System.out.println("sprite = " + sprite);
-//                    System.out.println("this.position = " + this.position);
-                });
+                .forEachOrdered(sprite -> this.onSnap(sprite.interact(this)));
     }
+
+    protected abstract void onSnap(Direction direction);
 
     protected void calculateDrag() {
         velocity = velocity.multiply(Settings.player.drag);

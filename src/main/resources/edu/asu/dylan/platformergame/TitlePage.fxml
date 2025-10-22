@@ -58,5 +58,32 @@
                 <Insets right="5.0" />
             </StackPane.margin>
         </Wall>
+
+        <Wall fitHeight="16.0" fitWidth="1920.0" StackPane.alignment="TOP_CENTER">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets bottom="5.0" />
+            </StackPane.margin>
+        </Wall>
+        <Wall fitHeight="1080.0" fitWidth="16.0" StackPane.alignment="CENTER_LEFT">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets right="5.0" />
+            </StackPane.margin>
+        </Wall>
+
+        <Wall fitHeight="16.0" fitWidth="128.0" StackPane.alignment="BOTTOM_RIGHT">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets bottom="128.0" />
+            </StackPane.margin>
+        </Wall>
+        <Wall fitHeight="144.0" fitWidth="16.0" StackPane.alignment="BOTTOM_RIGHT">
+            <Image url="@Assets/UnknownTexture.png" />
+            <StackPane.margin>
+                <Insets right="128.0" />
+            </StackPane.margin>
+        </Wall>
+
     </StackPane>
 </VBox>
