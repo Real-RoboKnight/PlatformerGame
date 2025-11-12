@@ -3,13 +3,10 @@
 <?import edu.asu.dylan.platformergame.sprites.entitys.Player?>
 <?import edu.asu.dylan.platformergame.sprites.sprites.Wall?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?scenebuilder-classpath-element target/classes?>
 
 <?import edu.asu.dylan.platformergame.sprites.sprites.Fire?>

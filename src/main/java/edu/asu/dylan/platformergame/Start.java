@@ -1,11 +1,8 @@
 package edu.asu.dylan.platformergame;
 
-import edu.asu.dylan.platformergame.sprites.Entity;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Point2D;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 

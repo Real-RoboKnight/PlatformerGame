@@ -3,7 +3,6 @@ package edu.asu.dylan.platformergame;
 import edu.asu.dylan.platformergame.sprites.entitys.Player;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
-import javafx.scene.control.Label;
 
 public class Game {
     @FXML
