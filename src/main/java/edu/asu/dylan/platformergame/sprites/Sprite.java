@@ -2,11 +2,11 @@ package edu.asu.dylan.platformergame.sprites;
 
 import edu.asu.dylan.platformergame.Settings;
 import javafx.geometry.Bounds;
-import javafx.scene.image.ImageView;
+import javafx.scene.layout.Region;
 
 import java.util.ArrayList;
 
-public abstract class Sprite extends ImageView {
+public abstract class Sprite extends Region {
     protected static ArrayList<Sprite> sprites = new ArrayList<>();
 
     public Sprite() {
@@ -29,11 +29,7 @@ public abstract class Sprite extends ImageView {
         if (entityBound.getMinY() < thisBounds.getMaxY() && entityBound.getMinY() > thisBounds.getMaxY() - Settings.snapingTolarancePX) return Direction.Up;
         if (entityBound.getMaxX() > thisBounds.getMinX() && entityBound.getMaxX() < thisBounds.getMinX() + Settings.snapingTolarancePX) return Direction.Right;
         if (entityBound.getMinX() < thisBounds.getMaxX() && entityBound.getMinX() > thisBounds.getMaxX() - Settings.snapingTolarancePX) return Direction.Left;
-
-        if (Math.abs(entity.velocity.getY()) > Math.abs(entity.velocity.getX()))
-            return entity.velocity.getY() > 0 ? Direction.Down : Direction.Up;
-        else
-            return entity.velocity.getX() > 0 ? Direction.Right : Direction.Left;
+        return Direction.None;
     }
 
     /**

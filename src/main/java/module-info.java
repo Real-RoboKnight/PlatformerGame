@@ -9,6 +9,7 @@ module edu.asu.dylan.platformergame {
     requires javafx.graphics;
     requires com.almasb.fxgl.core;
     requires annotations;
+    requires java.desktop;
 
     opens edu.asu.dylan.platformergame;
     exports edu.asu.dylan.platformergame.sprites;

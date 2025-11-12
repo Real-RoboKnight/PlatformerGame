@@ -2,25 +2,29 @@ package edu.asu.dylan.platformergame.sprites.entitys;
 
 import edu.asu.dylan.platformergame.Settings;
 import edu.asu.dylan.platformergame.sprites.Entity;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
-import javafx.scene.input.KeyEvent;
-import org.jetbrains.annotations.NotNull;
+import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.stage.Stage;
+
+import java.awt.*;
+import java.io.IOException;
 
 public class Player extends Entity {
 //TODO: make the key handler keep state so that we can use multi inputs. Also normalise multi inputs.
-    public void handleKeyInput(@NotNull KeyEvent keyEvent) {
-//        System.out.println(keyEvent);
-        switch (keyEvent.getText()) {
-            case "w" -> velocity = velocity.add(0, -Settings.player.inputPower);
-            case "s" -> velocity = velocity.add(0, Settings.player.inputPower);
-            case "a" -> velocity = velocity.add(-Settings.player.inputPower, 0);
-            case "d" -> velocity = velocity.add(Settings.player.inputPower, 0);
-        }
-//        System.out.println(this);
+    public Point2D handleKeyInput() {
+        Point2D out = Point2D.ZERO;
+        if(Settings.player.keysPressed.contains(KeyCode.W)) out = out.add(0, -Settings.player.inputPower);
+        if(Settings.player.keysPressed.contains(KeyCode.S)) out = out.add(0, Settings.player.inputPower);
+        if(Settings.player.keysPressed.contains(KeyCode.A)) out = out.add(-Settings.player.inputPower, 0);
+        if(Settings.player.keysPressed.contains(KeyCode.D)) out = out.add(Settings.player.inputPower, 0);
+        return out.normalize();
     }
 
     @Override
     public void AI(){
+        this.velocity = this.velocity.add(this.handleKeyInput());
         aniClip();
     }
 
@@ -50,5 +54,17 @@ public class Player extends Entity {
     @Override
     public Direction interact(Entity entity) {
         return Direction.None;
+    }
+    @Override
+    public void kill() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dylan/platformergame/Death.fxml"));
+        try {
+            Scene deathScene = new Scene(fxmlLoader.load(), 1920, 1080);
+            Settings.stage.setScene(deathScene);
+            Settings.stage.show();
+            for(Entity entity : entities) {
+                entity.scheduler.shutdownNow();
+            }
+        } catch (IOException _) {}
     }
 }

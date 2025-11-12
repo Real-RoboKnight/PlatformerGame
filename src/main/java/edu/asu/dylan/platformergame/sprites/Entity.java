@@ -3,6 +3,7 @@ package edu.asu.dylan.platformergame.sprites;
 import edu.asu.dylan.platformergame.Settings;
 import javafx.application.Platform;
 import javafx.geometry.Point2D;
+import javafx.scene.layout.StackPane;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executors;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class Entity extends Sprite {
 
-    private static final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    public final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
     public Point2D position;
     public Point2D velocity = Point2D.ZERO;
     public Point2D acceleration = new Point2D(0, Settings.gravity);
@@ -19,7 +20,7 @@ public abstract class Entity extends Sprite {
     protected static ArrayList<Entity> entities = new ArrayList<>();
 
     public Entity() {
-        scheduler.scheduleAtFixedRate(() -> Platform.runLater(this::physicsEngine), 0, Settings.physicsFrequencyMS, TimeUnit.MILLISECONDS);
+        scheduler.scheduleAtFixedRate(() -> Platform.runLater(this::physicsEngine), 0, 1000 / Settings.framerate, TimeUnit.MILLISECONDS);
         position = new Point2D(getTranslateX(), getTranslateY());
         entities.add(this);
     }
@@ -69,5 +70,10 @@ public abstract class Entity extends Sprite {
                 ", velocity=" + velocity +
                 ", acceleration=" + acceleration +
                 '}';
+    }
+
+    public void kill(){
+        entities.remove(this);
+        ((StackPane)this.getParent()).getChildren().remove(this);
     }
 }

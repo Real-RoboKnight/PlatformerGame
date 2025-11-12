@@ -1,0 +1,19 @@
+.wall-style {
+    /* Set the background image */
+    -fx-background-image: url('Assets/WallTexture.jpg');
+    /*-fx-background-size: 100% 100%;*/
+    -fx-background-position: center;
+    -fx-background-repeat: repeat ;
+
+}.player-style {
+     /* Set the background image */
+     -fx-background-image: url('Assets/player.png');
+     -fx-background-size: contain;
+     -fx-background-position: center;
+ }.fire-style {
+      /* Set the background image */
+      -fx-background-image: url('Assets/fire.gif');
+      -fx-background-size: contain;
+      -fx-background-position: center;
+      -fx-background-repeat: repeat-x;
+  }

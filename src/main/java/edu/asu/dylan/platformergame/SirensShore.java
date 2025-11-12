@@ -12,14 +12,18 @@ import java.io.IOException;
 public class SirensShore extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SirensShore.class.getResource("TitlePage.fxml"));
-        Scene titleScene = new Scene(fxmlLoader.load(), 1920, 1080);
+        Settings.stage = stage;
+        FXMLLoader fxmlLoader = new FXMLLoader(SirensShore.class.getResource("Start.fxml"));
+        Scene startScene = new Scene(fxmlLoader.load(), 1920, 1080);
         stage.setOnCloseRequest((WindowEvent _) -> {
             Platform.exit();
             System.exit(0);
         });
         stage.setTitle("Siren's Shore!");
-        stage.setScene(titleScene);
+        stage.setScene(startScene);
         stage.show();
+        stage.setResizable(false);
+        stage.requestFocus();
+
     }
 }
