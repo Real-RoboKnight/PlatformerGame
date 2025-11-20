@@ -2,7 +2,6 @@ package edu.asu.dylan.platformergame.sprites.entitys;
 
 import edu.asu.dylan.platformergame.Settings;
 import edu.asu.dylan.platformergame.sprites.Entity;
-import edu.asu.dylan.platformergame.sprites.Sprite;
 import javafx.geometry.Point2D;
 
 public class Bear extends Entity {
@@ -20,7 +19,7 @@ public class Bear extends Entity {
 
     @Override
     public void AI() {
-        aniClip();
+        antiClip();
     }
 
     @Override

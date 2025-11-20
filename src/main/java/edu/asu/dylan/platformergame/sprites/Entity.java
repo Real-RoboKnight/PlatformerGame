@@ -34,7 +34,7 @@ public abstract class Entity extends Sprite {
         moveEntity();
     }
 
-    protected void aniClip(){
+    protected void antiClip(){
 //        System.out.println("Entity.aniClip");
         Sprite.sprites.stream()
                 .filter(sprite -> sprite != this) //Dont check for collisions with self

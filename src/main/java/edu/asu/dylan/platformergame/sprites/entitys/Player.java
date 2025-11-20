@@ -7,7 +7,6 @@ import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Player extends Entity {
@@ -25,7 +24,7 @@ public class Player extends Entity {
     public void AI(){
         calculateDrag();
         this.velocity = this.velocity.add(this.handleKeyInput());
-        aniClip();
+        antiClip();
     }
 
     protected void calculateDrag() {
