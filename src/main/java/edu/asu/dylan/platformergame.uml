@@ -3,80 +3,72 @@
   <ID>JAVA</ID>
   <OriginalElement>/home/robocat/Documents/Code/ASU/CSE 205/PlatformerGame/src/main/java/edu/asu/dylan/platformergame</OriginalElement>
   <nodes>
-    <node x="-962.0" y="1421.0">edu.asu.dylan.platformergame.sprites.sprites.Wall</node>
-    <node x="-565.5" y="955.5">edu.asu.dylan.platformergame.sprites.entitys.Bear</node>
-    <node x="-929.5" y="1731.5">edu.asu.dylan.platformergame.Settings</node>
-    <node x="-793.5" y="883.5">edu.asu.dylan.platformergame.sprites.entitys.Player</node>
-    <node x="-740.0" y="1132.0">edu.asu.dylan.platformergame.sprites.Entity</node>
-    <node x="-174.0" y="1421.0">edu.asu.dylan.platformergame.sprites.sprites.Fire</node>
-    <node x="-766.5" y="730.0">edu.asu.dylan.platformergame.Game</node>
-    <node x="-408.0" y="1731.5">edu.asu.dylan.platformergame.Launcher</node>
-    <node x="48.0" y="1421.0">edu.asu.dylan.platformergame.sprites.sprites.Win</node>
-    <node x="-962.0" y="1956.0">edu.asu.dylan.platformergame.Settings.player</node>
-    <node x="-397.0" y="1276.0">edu.asu.dylan.platformergame.sprites.Sprite.Direction</node>
-    <node x="-658.0" y="1731.5">edu.asu.dylan.platformergame.Start</node>
-    <node x="-199.0" y="1731.5">edu.asu.dylan.platformergame.SirensShore</node>
-    <node x="-477.5" y="1549.5">edu.asu.dylan.platformergame.sprites.Sprite</node>
+    <node x="-197.5" y="767.5">edu.asu.dylan.platformergame.sprites.sprites.Wall</node>
+    <node x="-480.0" y="1086.0">edu.asu.dylan.platformergame.sprites.entitys.Bear</node>
+    <node x="-930.0" y="1466.0">edu.asu.dylan.platformergame.Settings</node>
+    <node x="-930.0" y="1050.0">edu.asu.dylan.platformergame.sprites.entitys.Player</node>
+    <node x="-762.5" y="623.0">edu.asu.dylan.platformergame.sprites.Entity</node>
+    <node x="-419.5" y="767.5">edu.asu.dylan.platformergame.sprites.sprites.Fire</node>
+    <node x="-702.0" y="1073.5">edu.asu.dylan.platformergame.sprites.entitys.RotatingObstacle</node>
+    <node x="-903.0" y="1308.0">edu.asu.dylan.platformergame.Game</node>
+    <node x="-441.0" y="1466.0">edu.asu.dylan.platformergame.Launcher</node>
+    <node x="24.5" y="767.5">edu.asu.dylan.platformergame.sprites.sprites.Win</node>
+    <node x="-691.0" y="1466.0">edu.asu.dylan.platformergame.Start</node>
+    <node x="-232.0" y="1466.0">edu.asu.dylan.platformergame.SirensShore</node>
+    <node x="-329.0" y="436.0">edu.asu.dylan.platformergame.sprites.Sprite</node>
   </nodes>
   <notes />
   <edges>
     <edge source="edu.asu.dylan.platformergame.sprites.entitys.Bear" target="edu.asu.dylan.platformergame.sprites.Entity" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="-464.5" y="1111.5" />
-      <point x="-578.5" y="1111.5" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-68.0" />
+      <point x="-379.0" y="1025.0" />
+      <point x="-601.0" y="1025.0" />
+      <point x="0.0" y="188.5" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.sprites.sprites.Wall" target="edu.asu.dylan.platformergame.sprites.Sprite" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="-861.0" y="1529.0" />
-      <point x="-356.0" y="1529.0" />
-      <point x="0.0" y="-0.0" />
-    </edge>
-    <edge source="edu.asu.dylan.platformergame.sprites.Sprite.Direction" target="edu.asu.dylan.platformergame.sprites.Sprite" relationship="INNER_CLASS">
-      <point x="0.0" y="-0.0" />
-      <point x="-295.5" y="1529.0" />
-      <point x="-356.0" y="1529.0" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-44.0" />
+      <point x="-96.5" y="598.0" />
+      <point x="-207.5" y="598.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.sprites.entitys.Player" target="edu.asu.dylan.platformergame.sprites.Entity" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="-689.5" y="1111.5" />
-      <point x="-578.5" y="1111.5" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-104.0" />
+      <point x="-826.0" y="1025.0" />
+      <point x="-601.0" y="1025.0" />
+      <point x="0.0" y="188.5" />
+    </edge>
+    <edge source="edu.asu.dylan.platformergame.sprites.entitys.RotatingObstacle" target="edu.asu.dylan.platformergame.sprites.Entity" relationship="GENERALIZATION">
+      <point x="0.0" y="-80.5" />
+      <point x="0.0" y="188.5" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.sprites.sprites.Fire" target="edu.asu.dylan.platformergame.sprites.Sprite" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="-73.0" y="1529.0" />
-      <point x="-356.0" y="1529.0" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-44.0" />
+      <point x="-318.5" y="598.0" />
+      <point x="-207.5" y="598.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.sprites.sprites.Win" target="edu.asu.dylan.platformergame.sprites.Sprite" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="149.0" y="1529.0" />
-      <point x="-356.0" y="1529.0" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-44.0" />
+      <point x="125.5" y="598.0" />
+      <point x="-207.5" y="598.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.Game" target="edu.asu.dylan.platformergame.sprites.entitys.Player" relationship="TO_ONE">
-      <point x="0.0" y="-0.0" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-56.5" />
+      <point x="0.0" y="104.0" />
     </edge>
     <edge source="edu.asu.dylan.platformergame.sprites.Entity" target="edu.asu.dylan.platformergame.sprites.Sprite" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="-578.5" y="1529.0" />
-      <point x="-356.0" y="1529.0" />
-      <point x="0.0" y="-0.0" />
-    </edge>
-    <edge source="edu.asu.dylan.platformergame.Settings.player" target="edu.asu.dylan.platformergame.Settings" relationship="INNER_CLASS">
-      <point x="0.0" y="-0.0" />
-      <point x="0.0" y="-0.0" />
+      <point x="0.0" y="-188.5" />
+      <point x="-601.0" y="598.0" />
+      <point x="-207.5" y="598.0" />
+      <point x="0.0" y="68.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.6476121562952243" showDependencies="true" x="341.5" y="1583.5" />
+  <settings layout="Hierarchic" zoom="0.6442463533225283" showDependencies="true" x="-341.5" y="1053.0" />
   <SelectedNodes />
   <Categories>
     <Category>Constructors</Category>
     <Category>Fields</Category>
-    <Category>Inner Classes</Category>
     <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>

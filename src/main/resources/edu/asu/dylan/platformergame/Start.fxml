@@ -15,11 +15,11 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <StackPane stylesheets="@styles.css">
-        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true">
             <Image url="@Assets/TitlePageBackground.png" />
         </ImageView>
 
-        <Label alignment="CENTER" text="Welcome to the GAME!" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+        <Label alignment="CENTER" text="Welcome to the bee flight game!" textFill="#C49" StackPane.alignment="TOP_CENTER">
           <font>
               <Font size="64.0" />
           </font>

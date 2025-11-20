@@ -9,16 +9,16 @@
 <?import javafx.scene.text.Font?>
 <?scenebuilder-classpath-element target/classes?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.6" >
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <StackPane stylesheets="@styles.css">
-        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true">
             <Image url="@Assets/TitlePageBackground.png" />
         </ImageView>
 
-        <Label alignment="CENTER" text="You Died, Sorry" textFill="WHITE" StackPane.alignment="TOP_CENTER">
+        <Label alignment="CENTER" text="You Died, Sorry" textFill="#C49" StackPane.alignment="TOP_CENTER">
           <font>
               <Font size="64.0" />
           </font>
