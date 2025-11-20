@@ -1,7 +1,7 @@
-package edu.asu.dylan.platformergame.sprites.sprites;
+package edu.asu.dshah177.platformergame.sprites.sprites;
 
-import edu.asu.dylan.platformergame.sprites.Entity;
-import edu.asu.dylan.platformergame.sprites.Sprite;
+import edu.asu.dshah177.platformergame.sprites.Entity;
+import edu.asu.dshah177.platformergame.sprites.Sprite;
 import javafx.geometry.Point2D;
 
 public class Wall extends Sprite {

@@ -1,4 +1,4 @@
-package edu.asu.dylan.platformergame;
+package edu.asu.dshah177.platformergame;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class Start {
     protected void onStartButtonClick() {
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dylan/platformergame/Game.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dshah177/platformergame/Game.fxml"));
         try {
             Scene gameScene = new Scene(fxmlLoader.load(), 1900, 1000);
             Settings.stage.setScene(gameScene);

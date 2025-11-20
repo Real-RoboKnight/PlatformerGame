@@ -1,7 +1,7 @@
-package edu.asu.dylan.platformergame.sprites.entitys;
+package edu.asu.dshah177.platformergame.sprites.entitys;
 
-import edu.asu.dylan.platformergame.Settings;
-import edu.asu.dylan.platformergame.sprites.Entity;
+import edu.asu.dshah177.platformergame.Settings;
+import edu.asu.dshah177.platformergame.sprites.Entity;
 import javafx.geometry.Point2D;
 
 public class Bear extends Entity {

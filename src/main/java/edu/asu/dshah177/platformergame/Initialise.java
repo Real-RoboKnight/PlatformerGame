@@ -1,4 +1,4 @@
-package edu.asu.dylan.platformergame;
+package edu.asu.dshah177.platformergame;
 
 import javafx.application.Application;
 import javafx.application.Platform;

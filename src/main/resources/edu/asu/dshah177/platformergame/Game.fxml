@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?scenebuilder-classpath-element target/classes?>
 
-<?import edu.asu.dylan.platformergame.sprites.entitys.Bear?>
-<?import edu.asu.dylan.platformergame.sprites.entitys.Player?>
-<?import edu.asu.dylan.platformergame.sprites.sprites.Fire?>
-<?import edu.asu.dylan.platformergame.sprites.sprites.Wall?>
-<?import edu.asu.dylan.platformergame.sprites.sprites.Win?>
-<?import edu.asu.dylan.platformergame.sprites.entitys.RotatingObstacle?>
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.asu.dylan.platformergame.Game">
+<?import edu.asu.dshah177.platformergame.sprites.entitys.Bear?>
+<?import edu.asu.dshah177.platformergame.sprites.entitys.Player?>
+<?import edu.asu.dshah177.platformergame.sprites.sprites.Fire?>
+<?import edu.asu.dshah177.platformergame.sprites.sprites.Wall?>
+<?import edu.asu.dshah177.platformergame.sprites.sprites.Win?>
+<?import edu.asu.dshah177.platformergame.sprites.entitys.RotatingObstacle?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.asu.dshah177.platformergame.Game">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>

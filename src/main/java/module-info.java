@@ -1,4 +1,4 @@
-module edu.asu.dylan.platformergame {
+module edu.asu.dshah177.platformergame {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,9 +11,9 @@ module edu.asu.dylan.platformergame {
     requires annotations;
     requires java.desktop;
 
-    opens edu.asu.dylan.platformergame;
-    exports edu.asu.dylan.platformergame.sprites;
-    exports edu.asu.dylan.platformergame;
-    exports edu.asu.dylan.platformergame.sprites.entitys;
-    exports edu.asu.dylan.platformergame.sprites.sprites;
+    opens edu.asu.dshah177.platformergame;
+    exports edu.asu.dshah177.platformergame.sprites;
+    exports edu.asu.dshah177.platformergame;
+    exports edu.asu.dshah177.platformergame.sprites.entitys;
+    exports edu.asu.dshah177.platformergame.sprites.sprites;
 }

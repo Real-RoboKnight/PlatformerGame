@@ -1,6 +1,6 @@
-package edu.asu.dylan.platformergame;
+package edu.asu.dshah177.platformergame;
 
-import edu.asu.dylan.platformergame.sprites.entitys.Player;
+import edu.asu.dshah177.platformergame.sprites.entitys.Player;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 

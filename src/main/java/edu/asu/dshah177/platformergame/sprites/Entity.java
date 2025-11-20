@@ -1,6 +1,6 @@
-package edu.asu.dylan.platformergame.sprites;
+package edu.asu.dshah177.platformergame.sprites;
 
-import edu.asu.dylan.platformergame.Settings;
+import edu.asu.dshah177.platformergame.Settings;
 import javafx.application.Platform;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.StackPane;

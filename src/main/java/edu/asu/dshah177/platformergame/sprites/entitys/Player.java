@@ -1,7 +1,7 @@
-package edu.asu.dylan.platformergame.sprites.entitys;
+package edu.asu.dshah177.platformergame.sprites.entitys;
 
-import edu.asu.dylan.platformergame.Settings;
-import edu.asu.dylan.platformergame.sprites.Entity;
+import edu.asu.dshah177.platformergame.Settings;
+import edu.asu.dshah177.platformergame.sprites.Entity;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
@@ -60,7 +60,7 @@ public class Player extends Entity {
     }
     @Override
     public void kill() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dylan/platformergame/Death.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dshah177/platformergame/Death.fxml"));
         try {
             Scene deathScene = new Scene(fxmlLoader.load(), 1900, 1000);
             Settings.stage.setScene(deathScene);
