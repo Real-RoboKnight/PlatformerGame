@@ -63,7 +63,7 @@ public class Player extends Entity {
     public void kill() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dylan/platformergame/Death.fxml"));
         try {
-            Scene deathScene = new Scene(fxmlLoader.load(), 1920, 1080);
+            Scene deathScene = new Scene(fxmlLoader.load(), 1900, 1000);
             Settings.stage.setScene(deathScene);
             Settings.stage.show();
             for(Entity entity : entities) {

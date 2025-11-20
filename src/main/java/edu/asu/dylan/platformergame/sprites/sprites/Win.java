@@ -17,7 +17,7 @@ public class Win extends Sprite {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/asu/dylan/platformergame/Win.fxml"));
         try {
-            Scene winScene = new Scene(fxmlLoader.load(), 1920, 1080);
+            Scene winScene = new Scene(fxmlLoader.load(), 1900, 1000);
             Settings.stage.setScene(winScene);
             Settings.stage.show();
             for(Entity e : entities) {

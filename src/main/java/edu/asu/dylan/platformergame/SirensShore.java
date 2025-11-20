@@ -14,7 +14,7 @@ public class SirensShore extends Application {
     public void start(Stage stage) throws IOException {
         Settings.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(SirensShore.class.getResource("Start.fxml"));
-        Scene startScene = new Scene(fxmlLoader.load(), 1920, 1080);
+        Scene startScene = new Scene(fxmlLoader.load(), 1900, 1000);
         stage.setOnCloseRequest((WindowEvent _) -> {
             Platform.exit();
             System.exit(0);

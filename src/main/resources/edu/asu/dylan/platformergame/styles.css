@@ -22,6 +22,7 @@
     -fx-background-image: url('Assets/bear.png');
     -fx-background-size: contain;
     -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
 }
 .win-style {
     /* Set the background image */
