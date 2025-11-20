@@ -17,3 +17,15 @@
       -fx-background-position: center;
       -fx-background-repeat: repeat-x;
   }
+.bear-style {
+    /* Set the background image */
+    -fx-background-image: url('Assets/bear.png');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+}
+.win-style {
+    /* Set the background image */
+    -fx-background-image: url('Assets/win.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}

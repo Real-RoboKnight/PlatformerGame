@@ -23,8 +23,13 @@ public class Player extends Entity {
 
     @Override
     public void AI(){
+        calculateDrag();
         this.velocity = this.velocity.add(this.handleKeyInput());
         aniClip();
+    }
+
+    protected void calculateDrag() {
+        velocity = velocity.multiply(Settings.player.drag);
     }
 
     @Override

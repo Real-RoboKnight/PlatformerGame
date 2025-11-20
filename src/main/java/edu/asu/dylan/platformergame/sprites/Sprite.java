@@ -25,10 +25,10 @@ public abstract class Sprite extends Region {
         Bounds entityBound = entity.localToScene(entity.getBoundsInLocal());
         Bounds thisBounds = this.localToScene(this.getBoundsInLocal());
         if (!thisBounds.intersects(entityBound)) return Direction.None;
-        if (entityBound.getMaxY() > thisBounds.getMinY() && entityBound.getMaxY() < thisBounds.getMinY() + Settings.snapingTolarancePX) return Direction.Down;
-        if (entityBound.getMinY() < thisBounds.getMaxY() && entityBound.getMinY() > thisBounds.getMaxY() - Settings.snapingTolarancePX) return Direction.Up;
         if (entityBound.getMaxX() > thisBounds.getMinX() && entityBound.getMaxX() < thisBounds.getMinX() + Settings.snapingTolarancePX) return Direction.Right;
         if (entityBound.getMinX() < thisBounds.getMaxX() && entityBound.getMinX() > thisBounds.getMaxX() - Settings.snapingTolarancePX) return Direction.Left;
+        if (entityBound.getMaxY() > thisBounds.getMinY() && entityBound.getMaxY() < thisBounds.getMinY() + Settings.snapingTolarancePX) return Direction.Down;
+        if (entityBound.getMinY() < thisBounds.getMaxY() && entityBound.getMinY() > thisBounds.getMaxY() - Settings.snapingTolarancePX) return Direction.Up;
         return Direction.None;
     }
 

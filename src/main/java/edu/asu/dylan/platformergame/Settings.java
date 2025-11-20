@@ -15,6 +15,7 @@ public class Settings {
     public static final double gravity = 0.075;
 
     public static final int snapingTolarancePX = 16;
+    public static final int bearSpeed = 5;
 
     public static Stage stage;
 

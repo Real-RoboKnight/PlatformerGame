@@ -17,7 +17,7 @@ public abstract class Entity extends Sprite {
     public Point2D velocity = Point2D.ZERO;
     public Point2D acceleration = new Point2D(0, Settings.gravity);
 
-    protected static ArrayList<Entity> entities = new ArrayList<>();
+    public static ArrayList<Entity> entities = new ArrayList<>();
 
     public Entity() {
         scheduler.scheduleAtFixedRate(() -> Platform.runLater(this::physicsEngine), 0, 1000 / Settings.framerate, TimeUnit.MILLISECONDS);
@@ -30,7 +30,6 @@ public abstract class Entity extends Sprite {
     protected void physicsEngine() {
         integratePositionVelocityAcceleration();
 //        System.out.println("this = " + this);
-        calculateDrag();
         AI();
         moveEntity();
     }
@@ -44,10 +43,6 @@ public abstract class Entity extends Sprite {
     }
 
     protected abstract void onSnap(Direction direction);
-
-    protected void calculateDrag() {
-        velocity = velocity.multiply(Settings.player.drag);
-    }
 
     protected void integratePositionVelocityAcceleration() {
         velocity = velocity.add(acceleration);
