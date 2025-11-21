@@ -8,7 +8,6 @@ module edu.asu.dshah177.platformergame {
     requires com.almasb.fxgl.all;
     requires javafx.graphics;
     requires com.almasb.fxgl.core;
-    requires annotations;
     requires java.desktop;
 
     opens edu.asu.dshah177.platformergame;
